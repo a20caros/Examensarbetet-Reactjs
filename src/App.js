@@ -1,14 +1,14 @@
 import './App.css';
+import {Routes, Route } from 'react-router-dom';
+import Home from './Elements/Home';
 
-function App() {
+const App=()=>{
   return (
-    <div className="App">
-      <header className="App-header">
-       
-        
-      </header>
-    </div>
-  );
+    <>
+    <Routes>
+      <Route exact path='/' element={<Home/>}/>
+    </Routes>
+    </>
+  )
 }
-
 export default App;
