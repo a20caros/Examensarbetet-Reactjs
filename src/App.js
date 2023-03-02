@@ -1,14 +1,18 @@
 import './App.css';
 import { Routes,Route, BrowserRouter } from 'react-router-dom';
 import Home from './Elements/Home';
+import Navbar from './Elements/Navbar';
+import ParfymeSite from './Elements/ParfymeSite';
 
 const App=()=>{
   return (
     <>
     <BrowserRouter>
-    <Routes>
-      <Route exact path='/' element={<Home/>}/>
-    </Routes>
+    <Navbar/>
+      <Routes>
+        <Route exact path='/' element={<Home/>}/>
+        <Route path='/ParfymeSite' element={<ParfymeSite/>}/>
+      </Routes>
     </BrowserRouter>
     </>
   )
