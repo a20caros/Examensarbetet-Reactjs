@@ -31,7 +31,7 @@ body{
 .parfymeImg img{
     border-radius:15px; 
 }
-.sandParfyme{
+.handParfyme{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -44,4 +44,11 @@ body{
     font-size: 25px;
     color: white;
     width: 300px;
+}
+.parfymeflower{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    margin-bottom: 100px;
 }
