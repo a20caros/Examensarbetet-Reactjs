@@ -11,7 +11,7 @@ const Navbar=()=>{
             <nav>
                 <div className='list'>
                     <NavLink className="navbarList" to="/">Hem</NavLink>
-                    <NavLink to="/ParfymeSite">Parfymer</NavLink>
+                    <NavLink to="/ProductShop">Parfymer</NavLink>
                 </div>
                 <div className='loggoType'>
                     <h2>INNOVIA<br></br></h2>
