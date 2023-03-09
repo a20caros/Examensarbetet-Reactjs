@@ -5,12 +5,14 @@ import Home from './Elements/Home';
 import Navbar from './Elements/Navbar';
 import ProductShop from './Elements/productShop';
 import Footer from './Elements/Footer';
+import ShopContextProvider from './Elements/Perfume';
 
 
 
 const App=()=>{
   return (
     <>
+    <ShopContextProvider>
     <BrowserRouter>
     <Navbar/>
       <Routes>
@@ -19,6 +21,7 @@ const App=()=>{
       </Routes>
       <Footer/>
     </BrowserRouter>
+    </ShopContextProvider>
     </>
   )
 }
