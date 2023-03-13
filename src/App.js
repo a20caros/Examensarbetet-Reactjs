@@ -6,6 +6,7 @@ import Navbar from './Elements/Navbar';
 import ProductShop from './Elements/productShop';
 import Footer from './Elements/Footer';
 import ShopContextProvider from './Elements/Perfume';
+import PerfumeSite from './Elements/perfumeSite';
 
 
 
@@ -17,7 +18,7 @@ const App=()=>{
     <Navbar/>
       <Routes>
         <Route exact path='/' element={<Home/>}/>
-        <Route path='/ProductShop' element={<ProductShop/>}/>
+        <Route path='/perfumeSite' element={<PerfumeSite/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

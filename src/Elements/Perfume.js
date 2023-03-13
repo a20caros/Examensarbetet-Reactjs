@@ -24,19 +24,19 @@ export const ShopContextProvider = (props) => {
         const maxPrice = 1000;
         const minPrice = 100;
         const productPrice = minPrice + (Math.floor(Math.random() * (maxPrice-minPrice)));
-        return productPrice;
+        return productPrice + ' kr';
     }
     const getProductSize = () => {
         const maxSize = 3;
         const minSize = 10;
         const productSize = minSize + (Math.floor(Math.random() * (maxSize-minSize)));
-        return productSize;
+        return productSize + ' ml';
     }
 
     const getProductSmell = () => {
         const smellArray =['vanilj','rosor','citrusfrukter','mandel','päron','äpple'];
         const productSmell = smellArray[(Math.random() * smellArray.length) | 0]
-        return productSmell;
+        return 'Doft av ' + productSmell;
     }
     const getProdutImg = () => {
         const productImgArray = [flowerPerfume, bluePerfume, sandPerfume, greenPerfume, orangePerfume, silkesPerfume, orangeFlowerPerfume, purpleFlowerPerfume];
