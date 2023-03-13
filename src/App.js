@@ -7,7 +7,7 @@ import Footer from './Elements/Footer';
 import ShopContextProvider from './Elements/Perfume';
 import PerfumeSite from './Elements/perfumeSite';
 import ShopMenPerfume from './Elements/shopMenPerfume';
-
+import Cart from './Elements/cart';
 
 
 const App=()=>{
@@ -20,6 +20,7 @@ const App=()=>{
         <Route exact path='/' element={<Home/>}/>
         <Route path='/perfumeSite' element={<PerfumeSite/>}/>
         <Route path='/shopMenPerfume' element={<ShopMenPerfume/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
