@@ -3,10 +3,10 @@ import React from 'react';
 import { Routes,Route, BrowserRouter } from 'react-router-dom';
 import Home from './Elements/Home';
 import Navbar from './Elements/Navbar';
-import ProductShop from './Elements/productShop';
 import Footer from './Elements/Footer';
 import ShopContextProvider from './Elements/Perfume';
 import PerfumeSite from './Elements/perfumeSite';
+import ShopMenPerfume from './Elements/shopMenPerfume';
 
 
 
@@ -19,6 +19,7 @@ const App=()=>{
       <Routes>
         <Route exact path='/' element={<Home/>}/>
         <Route path='/perfumeSite' element={<PerfumeSite/>}/>
+        <Route path='/shopMenPerfume' element={<ShopMenPerfume/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
