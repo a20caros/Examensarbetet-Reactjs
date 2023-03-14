@@ -41,9 +41,10 @@ export const PerfumeSite = () => {
                             {index == 1 && <h3>{item}</h3>}
                             {index == 2 && <p>{item}</p>}
                             {index == 3 && <p>{item}</p>}
-                            {index == 4 && <p>{item}</p>}
+                            {index == 4 && <p>{item}</p>}  
                         </span>
                     ))} 
+                     <button id="addToCartBtn">Lägg i varukorgen</button>
                 </div>
                 ))}
             </div>

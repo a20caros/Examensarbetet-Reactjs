@@ -8,22 +8,25 @@ import ShopContextProvider from './Elements/Perfume';
 import PerfumeSite from './Elements/perfumeSite';
 import ShopMenPerfume from './Elements/shopMenPerfume';
 import Cart from './Elements/cart';
+import { CartContextProvider } from './Elements/cart-context';
 
 
 const App=()=>{
   return (
     <>
     <ShopContextProvider>
-    <BrowserRouter>
-    <Navbar/>
-      <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route path='/perfumeSite' element={<PerfumeSite/>}/>
-        <Route path='/shopMenPerfume' element={<ShopMenPerfume/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
+        <Navbar/>
+          <Routes>
+            <Route exact path='/' element={<Home/>}/>
+            <Route path='/perfumeSite' element={<PerfumeSite/>}/>
+            <Route path='/shopMenPerfume' element={<ShopMenPerfume/>}/>
+            <Route path='/cart' element={<Cart/>}/>
+          </Routes>
+          <Footer/>
+        </BrowserRouter>
+      </CartContextProvider>
     </ShopContextProvider>
     </>
   )
