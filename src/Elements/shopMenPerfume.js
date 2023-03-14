@@ -44,6 +44,7 @@ export const MenPerfume = () => {
                     {index == 4 && <p>{item}</p>}
                 </span>
             ))} 
+            <button id="addToCartBtn">Lägg i varukorgen</button>
         </div>
         ))}
     </div>
