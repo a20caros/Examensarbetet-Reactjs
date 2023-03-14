@@ -17,8 +17,7 @@ import React, {createContext} from 'react';
 
 export const shopContext = createContext(null); 
 
-export const ShopContextProvider = (props) => {
-    const getProductName = () => {
+    function getProductName() {
         var productHeading='';
         const character = "ABCDEFGHIJKLMNOPRSTUV";
         for(var i, i = 0; i < 6; i++){
@@ -27,44 +26,59 @@ export const ShopContextProvider = (props) => {
         return productHeading;
       
     }
-    const getproductPrice = () =>{
+    function getproductPrice() {
         const maxPrice = 1000;
         const minPrice = 100;
         const productPrice = minPrice + (Math.floor(Math.random() * (maxPrice-minPrice)));
         return productPrice + ' kr';
     }
-    const getProductSize = () => {
+    function getProductSize() {
         const maxSize = 3;
         const minSize = 10;
         const productSize = minSize + (Math.floor(Math.random() * (maxSize-minSize)));
         return productSize + ' ml';
     }
 
-    const getProductSmell = () => {
+    function getProductSmell(){
         const smellArray =['vanilj','rosor','citrusfrukter','mandel','päron','äpple'];
         const productSmell = smellArray[(Math.random() * smellArray.length) | 0]
         return 'Doft av ' + productSmell;
     }
-    const getMenProductSmell = () => {
+    function getMenProductSmell(){
         const menSmellArray =['kastanj','lavensel','mynta','salvia','ceder','violblad'];
         const menProductSmell = menSmellArray[(Math.random() * menSmellArray.length) | 0]
         return 'Doft av ' + menProductSmell;
     }
-    const getProdutImg = () => {
+    function getProdutImg(){
         const productImgArray = [flowerPerfume, bluePerfume, sandPerfume, greenPerfume, orangePerfume, silkesPerfume, orangeFlowerPerfume, purpleFlowerPerfume];
         const productImg = productImgArray[(Math.random()*productImgArray.length) | 0];
         return productImg;
     }
-    const getMenProdutImg = () => {
+    function getMenProdutImg() {
         const menProductImgArray = [darkOrangePerfume, orangeMenPerfume, blackPerfume, greenCapPerfume, goldPerfume, darkBluePerfume, darkGoldPerfume];
         const menProductImg = menProductImgArray[(Math.random()*menProductImgArray.length) | 0];
         return menProductImg;
     }
-    const productContext ={getProductName, getproductPrice, getProductSize, getProductSmell, getProdutImg, getMenProductSmell, getMenProdutImg};
+    function generateProductId() {
+        const id = Math.floor(Math.random() * 10); // Generera ett slumpmässigt heltal mellan 0 och 9
+        return id.toString();
+      }
+    const productArray = [];
+      for (let i = 0; i < 10; i++) {
+        const PRODUCT = {
+            id: generateProductId(),
+            name: getProductName(),
+            price: getproductPrice(),
+            size: getProductSize(),
+            smell: getProductSmell(),
+            img: getProdutImg(),
+        };
+        productArray.push(PRODUCT);
+    }
    
-    return (
-        <shopContext.Provider value={productContext}>{props.children}</shopContext.Provider>
-    );
-};
-export default ShopContextProvider;
+    const allProducts = JSON.stringify(productArray);
+export default allProducts;
+   
+    
+
 

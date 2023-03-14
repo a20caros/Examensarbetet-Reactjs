@@ -12,8 +12,8 @@ const Navbar=()=>{
             <nav>
                 <div className='list'>
                     <NavLink className="navbarList" to="/">Hem</NavLink>
-                    <NavLink to="/perfumeSite">Dam Parfymer</NavLink>
-                    <NavLink to="/shopMenPerfume">Herr Parfymer</NavLink>
+                    <NavLink to="/writeProducts">Dam Parfymer</NavLink>
+                    <NavLink to="/writeProducts">Herr Parfymer</NavLink>
                     <NavLink to="/cart">
                         <MdShoppingCart className="cartFig" size={30}/>
                     </NavLink>
