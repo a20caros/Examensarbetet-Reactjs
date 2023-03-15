@@ -12,7 +12,6 @@ const Cart=()=>{
         removeItem,
         emptyCart,
         totalItems,} = useCart();
-    if(isEmpty) return <h1>Din varukorg är tom</h1>
     return(
        <div>
             <h1 id="yourCart">Din Varukorg</h1>
@@ -27,6 +26,7 @@ const Cart=()=>{
                     <p>{item.price}</p>
                     <p>{item.smell}</p>
                     <p>{item.size}</p>
+                    <button onClick={()=>removeItem(item.id)}>Ta bort produkt</button>
                 </div>
                 )
             })}
