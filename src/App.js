@@ -5,30 +5,28 @@ import Home from './Elements/Home';
 import Navbar from './Elements/Navbar';
 import Footer from './Elements/Footer';
 import WriteProductsMen from './Elements/writeProductsMen';
-import PerfumeSite from './Elements/perfumeSite';
+import PerfumeSite from './Elements/PerfumeSite';
 import WriteProducts from './Elements/writeProducts';
 import Cart from './Elements/cart';
-import { CartContextProvider } from './Elements/cart-context';
+import {CartProvider } from "react-use-cart";
 
 
 const App=()=>{
   return (
     <>
-
-      <CartContextProvider>
+      <CartProvider>
         <BrowserRouter>
         <Navbar/>
           <Routes>
             <Route exact path='/' element={<Home/>}/>
-            <Route path='/perfumeSite' element={<PerfumeSite/>}/>
+            <Route path='/PerfumeSite' element={<PerfumeSite/>}/>
             <Route path='/writeProducts' element={<WriteProducts/>}/>
             <Route path='/writeProductsMen' element={<WriteProductsMen/>}/>
             <Route path='/cart' element={<Cart/>}/>
           </Routes>
           <Footer/>
         </BrowserRouter>
-      </CartContextProvider>
-  
+      </CartProvider>
     </>
   )
 }

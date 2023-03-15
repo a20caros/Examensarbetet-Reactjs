@@ -1,9 +1,9 @@
 import React, { useContext} from "react";
 import '../CSS/ProductStyle.css';
-import { shopContext } from "./Perfume";
+
 
 export const ShopMenPerfume = (props) => {
-    const {name, smellMen, size, price, imgMen, id} = props.data;
+    const {name, smellMen, size, price, imgMen, idMen} = props.data;
     //const { addCart } = useContext(shopContext); 
 
     
@@ -15,7 +15,7 @@ export const ShopMenPerfume = (props) => {
                 <p>{price}</p>
                 <p>{smellMen}</p>
                 <p>{size}</p>
-                <p>{id}</p>
+                <p>{idMen}</p>
                 <button id="addToCartBtn" >Lägg i varukorgen</button>
             </div>
         </div>

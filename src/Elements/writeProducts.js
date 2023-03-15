@@ -1,15 +1,17 @@
-import React from "react";
-import allProducts  from "./Perfume";
+import React, {useContext} from "react";
+import products  from "./Perfume";
 import '../CSS/ProductStyle.css'; 
-import {PerfumeSite} from "./perfumeSite";
+import {PerfumeSite} from "./PerfumeSite";
+
+
 
 export const WriteProducts=()=>{
-    const products = JSON.parse(allProducts);
+  
     return (
         <div className="productFloat">
            {" "}
-            {products.map((PRODUCT) => (
-            <PerfumeSite data={PRODUCT}/>
+            {products.map((item, index) => (
+              <PerfumeSite img={item.img} name={item.name} price={item.price} smell={item.smell} size={item.size} item={item} key={index} id={item.id}/>
             ))}
          </div>
       

@@ -60,13 +60,18 @@ export const shopContext = createContext(null);
         return menProductImg;
     }
     function generateProductId() {
-        const id = Math.floor(Math.random() * 10); // Generera ett slumpmässigt heltal mellan 0 och 9
+        const id = Math.floor(Math.random() * 100 +1); 
+        return id.toString();
+      }
+      function generateMenProductId() {
+        const id = Math.floor(Math.random() * 100 +1); 
         return id.toString();
       }
     const productArray = [];
       for (let i = 0; i < 10; i++) {
         const PRODUCT = {
             id: generateProductId(),
+            idMen:generateMenProductId(),
             name: getProductName(),
             price: getproductPrice(),
             size: getProductSize(),
@@ -79,7 +84,8 @@ export const shopContext = createContext(null);
     }
    
     const allProducts = JSON.stringify(productArray);
-export default allProducts;
+    const products= JSON.parse(allProducts);
+export default products;
    
     
 

@@ -1,10 +1,10 @@
 import React from "react";
-import allProducts  from "./Perfume";
+import products  from "./Perfume";
 import '../CSS/ProductStyle.css'; 
 import {ShopMenPerfume} from "./shopMenPerfume";
 
 export const WriteProductsMen=()=>{
-    const products = JSON.parse(allProducts);
+ 
     return (
         <div className="productFloat">
            {" "}
