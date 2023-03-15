@@ -13,7 +13,7 @@ const Navbar=()=>{
                 <div className='list'>
                     <NavLink className="navbarList" to="/">Hem</NavLink>
                     <NavLink to="/writeProducts">Dam Parfymer</NavLink>
-                    <NavLink to="/writeProducts">Herr Parfymer</NavLink>
+                    <NavLink to="/writeProductsMen">Herr Parfymer</NavLink>
                     <NavLink to="/cart">
                         <MdShoppingCart className="cartFig" size={30}/>
                     </NavLink>

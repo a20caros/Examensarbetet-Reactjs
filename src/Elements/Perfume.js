@@ -71,7 +71,9 @@ export const shopContext = createContext(null);
             price: getproductPrice(),
             size: getProductSize(),
             smell: getProductSmell(),
+            smellMen: getMenProductSmell(),
             img: getProdutImg(),
+            imgMen: getMenProdutImg(),
         };
         productArray.push(PRODUCT);
     }

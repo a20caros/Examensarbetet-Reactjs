@@ -4,7 +4,7 @@ import { Routes,Route, BrowserRouter } from 'react-router-dom';
 import Home from './Elements/Home';
 import Navbar from './Elements/Navbar';
 import Footer from './Elements/Footer';
-
+import WriteProductsMen from './Elements/writeProductsMen';
 import PerfumeSite from './Elements/perfumeSite';
 import WriteProducts from './Elements/writeProducts';
 import Cart from './Elements/cart';
@@ -22,6 +22,7 @@ const App=()=>{
             <Route exact path='/' element={<Home/>}/>
             <Route path='/perfumeSite' element={<PerfumeSite/>}/>
             <Route path='/writeProducts' element={<WriteProducts/>}/>
+            <Route path='/writeProductsMen' element={<WriteProductsMen/>}/>
             <Route path='/cart' element={<Cart/>}/>
           </Routes>
           <Footer/>
