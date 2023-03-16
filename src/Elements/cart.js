@@ -1,37 +1,21 @@
-import React, { useContext } from 'react';
-import { useCart} from 'react-use-cart';
+import React from 'react';
 import '../CSS/cart.css'; 
 
-const Cart=()=>{
-    const {
-        isEmpty, 
-        totalUniqueItems,
-        items,
-        cartTotal,
-        updateItemQuantity,
-        removeItem,
-        emptyCart,
-        totalItems,} = useCart();
+const Cart=({cartProducts})=>{
     return(
        <div>
             <h1 id="yourCart">Din Varukorg</h1>
-            {items.map((item, index) =>{
-                return (
-                <div className='cartProductIthem' key={index}>
+            {cartProducts.map((item) =>
+            <div className="cartProductIthem" key={item.id}>
                 <img className="cartProductImg" src={item.img} />
-                    <p>
-                        {" "}
-                        <b> {item.name} </b>
-                    </p>
-                    <p>{item.price}</p>
-                    <p>{item.smell}</p>
-                    <p>{item.size}</p>
-                    <button className='removeProduct'onClick={()=>removeItem(item.id)}>X</button>
+                <p><b> {item.name} </b></p>
+                <p>{item.price}</p>
+                <p>{item.smell}</p>
+                <p>{item.size}</p>
                 </div>
-                )
-            })}
-      
+              
+            )}
        </div>
     )
-}
+};
 export default Cart; 
