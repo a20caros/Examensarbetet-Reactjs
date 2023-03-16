@@ -15,8 +15,10 @@ const App=()=>{
 
   const addToCart = (item) =>{
     setCartProducts([...cartProducts, item]);
+   
+
   }
- 
+
   return (
     <>
         <BrowserRouter>
@@ -24,9 +26,9 @@ const App=()=>{
           <Routes>
             <Route exact path='/' element={<Home/>}/>
             <Route path='/PerfumeSite' element={<PerfumeSite/>}/>
-            <Route path='/writeProducts' element={<WriteProducts addToCart={addToCart}/>}/>
+            <Route path='/writeProducts' element={<WriteProducts addToCart={addToCart} />}/>
             <Route path='/writeProductsMen' element={<WriteProductsMen/>}/>
-            <Route path='/cart' element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts} />}/>
+            <Route path='/cart' element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts}/>}/>
           </Routes>
           <Footer/>
         </BrowserRouter>

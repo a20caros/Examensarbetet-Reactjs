@@ -1,7 +1,11 @@
 import React from 'react';
 import '../CSS/cart.css'; 
 
-const Cart=({cartProducts})=>{
+const Cart=({setCartProducts, cartProducts})=>{
+    const removeProducts = (id) => {
+        const newAmount = cartProducts.filter((item) => item.id !==id);
+        setCartProducts(newAmount);
+    };
     return(
        <div>
             <h1 id="yourCart">Din Varukorg</h1>
@@ -12,6 +16,7 @@ const Cart=({cartProducts})=>{
                 <p>{item.price}</p>
                 <p>{item.smell}</p>
                 <p>{item.size}</p>
+                <button className="removeProduct" onClick={() => removeProducts(item.id)}>X</button>
                 </div>
               
             )}
