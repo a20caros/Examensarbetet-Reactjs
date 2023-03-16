@@ -67,25 +67,39 @@ export const shopContext = createContext(null);
         const id = Math.floor(Math.random() * 100 +1); 
         return id.toString();
       }
-    const productArray = [];
-      for (let i = 0; i < 10; i++) {
-        const PRODUCT = {
-            id: generateProductId(),
-            idMen:generateMenProductId(),
-            name: getProductName(),
-            price: getproductPrice(),
-            size: getProductSize(),
-            smell: getProductSmell(),
-            smellMen: getMenProductSmell(),
-            img: getProdutImg(),
-            imgMen: getMenProdutImg(),
-        };
-        productArray.push(PRODUCT);
+    function generatePerfumes(){
+        const productArray = [];
+        for (let i = 0; i < 10; i++) {
+            const PRODUCT = {
+                id: generateProductId(),
+                idMen:generateMenProductId(),
+                name: getProductName(),
+                price: getproductPrice(),
+                size: getProductSize(),
+                smell: getProductSmell(),
+                smellMen: getMenProductSmell(),
+                img: getProdutImg(),
+                imgMen: getMenProdutImg(),
+            };
+            productArray.push(PRODUCT);
+        }
+        return productArray;
     }
-   
-    const allProducts = JSON.stringify(productArray);
-    const products= JSON.parse(allProducts);
-export default products;
+    function savePerfumesToLocalStorage(){
+        const products = generatePerfumes();
+        const jsonPerfumes =JSON.stringify(products);
+        localStorage.setItem('products', jsonPerfumes);
+    }
+    function getPerfumesFromLocalStorage(){
+        const jsonPerfumes = localStorage.getItem('products');
+        return JSON.parse(jsonPerfumes);
+    }
+    if (!localStorage.getItem('products')){
+        savePerfumesToLocalStorage();
+    }
+    const product = getPerfumesFromLocalStorage();
+
+export default product;
    
     
 
