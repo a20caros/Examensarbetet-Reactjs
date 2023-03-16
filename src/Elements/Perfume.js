@@ -43,8 +43,9 @@ export const shopContext = createContext(null);
         return productImg;
     }
     function generateProductId() {
-        const id = Math.floor(Math.random() * 100 +1); 
-        return id.toString();
+        const time = Date.now().toString(36); 
+        const randomCharacters = Math.random().toString(36).substring(2, 8); 
+        return time + "-" + randomCharacters;
       }
     function generatePerfumes(){
         const productArray = [];
@@ -74,8 +75,6 @@ export const shopContext = createContext(null);
         savePerfumesToLocalStorage();
     }
     const product = getPerfumesFromLocalStorage();
-    
-
 export default product;
    
     
