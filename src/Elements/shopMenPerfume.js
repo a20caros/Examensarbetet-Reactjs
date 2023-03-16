@@ -1,21 +1,20 @@
-import React, { useContext} from "react";
+import React from "react";
 import '../CSS/ProductStyle.css';
 
 
 export const ShopMenPerfume = (props) => {
-    const {name, smellMen, size, price, imgMen, idMen} = props.data;
+    //const {menName, smellMen, menSize, menPrice, imgMen, idMen} = props.data;
     //const { addCart } = useContext(shopContext); 
 
     
    return  (     
         <div className='fullContainer'>
             <div className="perfumeContainer">
-                <img src={imgMen}/>
-                <p><b>{name}</b></p>
-                <p>{price}</p>
-                <p>{smellMen}</p>
-                <p>{size}</p>
-                <p>{idMen}</p>
+                <img src={props.imgMen}/>
+                <p><b>{props.menName}</b></p>
+                <p>{props.menPrice}</p>
+                <p>{props.smellMen}</p>
+                <p>{props.menSize}</p>
                 <button id="addToCartBtn" >Lägg i varukorgen</button>
             </div>
         </div>

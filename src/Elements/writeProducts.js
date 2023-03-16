@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import product  from "./Perfume";
 import '../CSS/ProductStyle.css'; 
 import {PerfumeSite} from "./PerfumeSite";
