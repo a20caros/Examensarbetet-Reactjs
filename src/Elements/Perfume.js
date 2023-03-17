@@ -6,7 +6,7 @@ import orangePerfume from './pexels-daria-liudnaya-8166972.jpg';
 import silkesPerfume from './pexels-hanna-auramenka-8553210.jpg';
 import orangeFlowerPerfume from './pexels-dids-1190829.jpg';
 import purpleFlowerPerfume from './pexels-daria-liudnaya-8166613.jpg';
-import React, {createContext} from 'react';
+import {createContext} from 'react';
 
 export const shopContext = createContext(null); 
 
@@ -23,7 +23,7 @@ export const shopContext = createContext(null);
         const maxPrice = 1000;
         const minPrice = 100;
         const productPrice = minPrice + (Math.floor(Math.random() * (maxPrice-minPrice)));
-        return productPrice + ' kr';
+        return productPrice;
     }
     function getProductSize() {
         const maxSize = 3;

@@ -77,7 +77,7 @@ export const shopContext = createContext(null);
         saveMenPerfumesToLocalStorage();
     }
     const menProduct = getMenPerfumesFromLocalStorage();
-console.log(menProduct);
+
 export default menProduct;
    
     

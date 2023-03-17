@@ -9,7 +9,7 @@ const PerfumeSite = ({item, addToCart})=> {
             <div className="perfumeContainer">
                 <img src={img}/>
                 <p><b>{name}</b></p>
-                <p>{price}</p>
+                <p>{price +' kr'}</p>
                 <p>{smell}</p>
                 <p>{size}</p>
                 <button id="addToCartBtn" onClick={() => addToCart(item)}>Lägg i varukorgen</button>

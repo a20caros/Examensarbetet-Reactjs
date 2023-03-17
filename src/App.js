@@ -15,13 +15,11 @@ const App=()=>{
 
   const addToCart = (item) =>{
     setCartProducts([...cartProducts, item]);
-   
-
   }
 
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
         <Navbar/>
           <Routes>
             <Route exact path='/' element={<Home/>}/>
