@@ -5,7 +5,7 @@ import greenCapPerfume from './pexels-dina-nasyrova-3831748.jpg';
 import goldPerfume from './pexels-syed-nouman-7400855.jpg';
 import darkBluePerfume from './pexels-jonathan-cooper-15190739.jpg';
 import darkGoldPerfume from './pexels-yogesh-jangid-7702669.jpg';
-import React, {createContext} from 'react';
+import {createContext} from 'react';
 export const shopContext = createContext(null); 
 
     function getMenProductName() {
@@ -21,7 +21,7 @@ export const shopContext = createContext(null);
         const maxPrice = 1000;
         const minPrice = 100;
         const menProductPrice = minPrice + (Math.floor(Math.random() * (maxPrice-minPrice)));
-        return menProductPrice + ' kr';
+        return menProductPrice;
     }
     function getMenProductSize() {
         const maxSize = 3;
@@ -40,25 +40,21 @@ export const shopContext = createContext(null);
         const menProductImg = menProductImgArray[(Math.random()*menProductImgArray.length) | 0];
         return menProductImg;
     }
-    function generateProductId() {
-        const id = Math.floor(Math.random() * 100 +1); 
-        return id.toString();
-      }
       function generateMenProductId() {
-        const id = Math.floor(Math.random() * 100 +1); 
-        return id.toString();
+        const time = Date.now().toString(36); 
+        const randomCharacters = Math.random().toString(36).substring(2, 8); 
+        return time + "-" + randomCharacters;
       }
     function generateMenPerfumes(){
         const menProductArray = [];
         for (let i = 0; i < 10; i++) {
             const PRODUCTS = {
-                id: generateProductId(),
-                idMen:generateMenProductId(),
-                menName: getMenProductName(),
-                menPrice: getMenProductPrice(),
-                menSize: getMenProductSize(),
-                smellMen: getMenProductSmell(),
-                imgMen: getMenProdutImg(),
+                id:generateMenProductId(),
+                name: getMenProductName(),
+                price: getMenProductPrice(),
+                size: getMenProductSize(),
+                smell: getMenProductSmell(),
+                img: getMenProdutImg(),
             };
             menProductArray.push(PRODUCTS);
         }
@@ -77,6 +73,7 @@ export const shopContext = createContext(null);
         saveMenPerfumesToLocalStorage();
     }
     const menProduct = getMenPerfumesFromLocalStorage();
+    localStorage.clear();
 
 export default menProduct;
    

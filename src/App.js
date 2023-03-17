@@ -25,7 +25,7 @@ const App=()=>{
             <Route exact path='/' element={<Home/>}/>
             <Route path='/PerfumeSite' element={<PerfumeSite/>}/>
             <Route path='/writeProducts' element={<WriteProducts addToCart={addToCart} />}/>
-            <Route path='/writeProductsMen' element={<WriteProductsMen/>}/>
+            <Route path='/writeProductsMen' element={<WriteProductsMen addToCart={addToCart}/>}/>
             <Route path='/cart' element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts}/>}/>
           </Routes>
           <Footer/>

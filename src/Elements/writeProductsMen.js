@@ -1,18 +1,17 @@
 import React from "react";
 import menProduct  from "./menPerfume";
 import '../CSS/ProductStyle.css'; 
-import {ShopMenPerfume} from "./shopMenPerfume";
+import ShopMenPerfume from "./shopMenPerfume";
 
-export const WriteProductsMen=()=>{
- 
+const WriteProductsMen=({addToCart})=>{
     return (
         <div className="productFloat">
            {" "}
-            {menProduct.map((item, index) => (
-            <ShopMenPerfume imgMen={item.imgMen} menName={item.menName} menPrice={item.menPrice} menSmell={item.menSmell} menSize={item.menSize} item={item} key={index} id={item.id}/>
+            {menProduct.map((item) => (
+            <ShopMenPerfume key={item.id} item={item} addToCart={addToCart}/>
             ))}
          </div>
       
     )
-}
+};
 export default WriteProductsMen;
