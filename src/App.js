@@ -2,7 +2,6 @@ import './App.css';
 import { Routes,Route, BrowserRouter } from 'react-router-dom';
 import Home from './Elements/Home';
 import Navbar from './Elements/Navbar';
-import Footer from './Elements/Footer';
 import WriteProductsMen from './Elements/writeProductsMen';
 import PerfumeSite from './Elements/PerfumeSite';
 import WriteProducts from './Elements/writeProducts';
@@ -28,7 +27,6 @@ const App=()=>{
             <Route path='/writeProductsMen' element={<WriteProductsMen addToCart={addToCart}/>}/>
             <Route path='/cart' element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts}/>}/>
           </Routes>
-          <Footer/>
         </BrowserRouter>
     </>
   )
