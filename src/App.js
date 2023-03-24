@@ -6,7 +6,8 @@ import WriteProductsMen from './Elements/writeProductsMen';
 import PerfumeSite from './Elements/PerfumeSite';
 import WriteProducts from './Elements/writeProducts';
 import Cart from './Elements/cart';
-import {useState, useEffect} from 'react';
+import ImagesInfo from './Elements/imagesInfo';
+import {useState} from 'react';
 
 
 const App=()=>{
@@ -42,6 +43,7 @@ const App=()=>{
             <Route path='/PerfumeSite' element={<PerfumeSite/>}/>
             <Route path='/writeProducts' element={<WriteProducts addToCart={addToCart} />}/>
             <Route path='/writeProductsMen' element={<WriteProductsMen addToCart={addToCart}/>}/>
+            <Route path='/imagesInfo' element={<ImagesInfo/>}/>
             <Route path='/cart' element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts} numberOfAProduct={numberOfAProduct}/>}/>
           </Routes>
         </BrowserRouter>

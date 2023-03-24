@@ -14,9 +14,12 @@ const Navbar=()=>{
                     <NavLink className="navbarList" to="/">Hem</NavLink>
                     <NavLink to="/writeProducts">Dam Parfymer</NavLink>
                     <NavLink to="/writeProductsMen">Herr Parfymer</NavLink>
+                   
                     <NavLink to="/cart">
                         <MdShoppingCart className="cartFig" size={30}/>
                     </NavLink>
+                    <NavLink to="/ImagesInfo">Bild information</NavLink>
+                    
                 </div>
                 <div className='loggoType'>
                     <h2>INNOVIA<br></br></h2>
