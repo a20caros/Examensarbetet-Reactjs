@@ -6,14 +6,31 @@ import WriteProductsMen from './Elements/writeProductsMen';
 import PerfumeSite from './Elements/PerfumeSite';
 import WriteProducts from './Elements/writeProducts';
 import Cart from './Elements/cart';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 
 const App=()=>{
   const [cartProducts, setCartProducts] = useState([]);
+  const [numberOfAProduct, setNumberOfAProduct] = useState(0);
 
   const addToCart = (item) =>{
-    setCartProducts([...cartProducts, item]);
+    const existingIndex = cartProducts.findIndex((product) => product.id === item.id);
+    if (existingIndex !== -1) {
+      const updatedProducts = [...cartProducts];
+      updatedProducts[existingIndex] = {
+        ...updatedProducts[existingIndex],
+        quantity: updatedProducts[existingIndex].quantity + 1,
+      };
+      setCartProducts(updatedProducts);
+    }else {
+      // Product doesn't exist in cart yet, add new product
+      const newProduct = {
+        ...item,
+        quantity: 1,
+      };
+      setCartProducts([...cartProducts, newProduct]);
+    }
+    setNumberOfAProduct(numberOfAProduct + 1);
   }
 
   return (
@@ -25,7 +42,7 @@ const App=()=>{
             <Route path='/PerfumeSite' element={<PerfumeSite/>}/>
             <Route path='/writeProducts' element={<WriteProducts addToCart={addToCart} />}/>
             <Route path='/writeProductsMen' element={<WriteProductsMen addToCart={addToCart}/>}/>
-            <Route path='/cart' element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts}/>}/>
+            <Route path='/cart' element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts} numberOfAProduct={numberOfAProduct}/>}/>
           </Routes>
         </BrowserRouter>
     </>

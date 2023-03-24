@@ -32,6 +32,7 @@ const Cart=({setCartProducts, cartProducts})=>{
                 <p>{item.price} kr</p>
                 <p>{item.smell}</p>
                 <p>{item.size}</p>
+                <p>Antalet av produkten: {item.quantity}</p>
                 <button className="removeProduct" onClick={() => removeProducts(item.id)}>X</button>
                 </div>
             )}
