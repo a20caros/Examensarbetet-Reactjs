@@ -18,7 +18,7 @@
 #yourCart{
     text-align: center;
 }
-.removeProduct{
+#removeProduct{
     background-color: whitesmoke;  
     text-align: center;
     border:none;

@@ -1,9 +1,10 @@
 import React from "react";
 import '../CSS/ProductStyle.css';
-
+import { Link } from "react-router-dom";
 const PerfumeSite = ({item, addToCart})=> {
-    const {name, smell, size, price, img} = item;
-
+    const {name, smell, size, price, img, id} = item;
+   
+         
    return  (     
         <div className='fullContainer'>
             <div className="perfumeContainer">
@@ -12,7 +13,7 @@ const PerfumeSite = ({item, addToCart})=> {
                 <p>{price +' kr'}</p>
                 <p>{smell}</p>
                 <p>{size}</p>
-                <button id="addToCartBtn" onClick={() => addToCart(item)}>+</button>
+                <Link to="/cart"><button id={id} className="addToCartBtn" onClick={() => addToCart(item)}>+</button></Link>
             </div>
         </div>
     );
