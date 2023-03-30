@@ -13,7 +13,7 @@ const PerfumeSite = ({item, addToCart})=> {
                 <p>{price +' kr'}</p>
                 <p>{smell}</p>
                 <p>{size}</p>
-                <Link to="/cart"><button id={id} className="addToCartBtn" onClick={() => addToCart(item)}>+</button></Link>
+                <Link to="/cart" className="linkAddToCart" id={id} onClick={() => addToCart(item)}>+</Link>
             </div>
         </div>
     );

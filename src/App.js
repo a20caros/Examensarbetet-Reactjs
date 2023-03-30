@@ -14,7 +14,7 @@ const App=()=>{
   const [cartProducts, setCartProducts] = useState([]);
   const [numberOfAProduct, setNumberOfAProduct] = useState(0);
 
-  const addToCart = (item) =>{
+  const addToCart = (item, callback) =>{
     const existingIndex = cartProducts.findIndex((product) => product.id === item.id);
     if (existingIndex !== -1) {
       const updatedProducts = [...cartProducts];
@@ -33,7 +33,7 @@ const App=()=>{
     }
     setNumberOfAProduct(numberOfAProduct + 1);
   }
-
+  
   return (
     <>
       <BrowserRouter>

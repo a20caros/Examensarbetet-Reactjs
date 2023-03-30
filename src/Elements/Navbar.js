@@ -15,7 +15,7 @@ const Navbar=()=>{
                     <NavLink to="/writeProducts" id="womenPerfume">Dam Parfymer</NavLink>
                     <NavLink to="/writeProductsMen">Herr Parfymer</NavLink>
                    
-                    <NavLink to="/cart">
+                    <NavLink id="cartButton" to="/cart" >
                         <MdShoppingCart className="cartFig" size={30}/>
                     </NavLink>
                     <NavLink to="/ImagesInfo">Bild information</NavLink>

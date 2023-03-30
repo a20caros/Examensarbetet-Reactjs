@@ -1,16 +1,16 @@
-import flowerPerfume from './pexels-darina-belonogova-8789609.jpg';
+/*import flowerPerfume from './pexels-darina-belonogova-8789609.jpg';
 import bluePerfume from './pexels-daria-liudnaya-8166566.jpg';
 import sandPerfume from './pexels-karolina-grabowska-8361478.jpg';
 import greenPerfume from './pexels-karolina-grabowska-8361487.jpg';
 import orangePerfume from './pexels-daria-liudnaya-8166972.jpg';
 import silkesPerfume from './pexels-hanna-auramenka-8553210.jpg';
 import orangeFlowerPerfume from './pexels-dids-1190829.jpg';
-import purpleFlowerPerfume from './pexels-daria-liudnaya-8166613.jpg';
+import purpleFlowerPerfume from './pexels-daria-liudnaya-8166613.jpg';*/
 import {createContext} from 'react';
 
 export const shopContext = createContext(null); 
 
-    function getProductName() {
+    /*function getProductName() {
         var productHeading='';
         const character = "ABCDEFGHIJKLMNOPRSTUV";
         for(var i, i = 0; i < 6; i++){
@@ -61,19 +61,23 @@ export const shopContext = createContext(null);
             productArray.push(PRODUCT);
         }
         return productArray;
-    }
-    function savePerfumesToLocalStorage(){
-        const products = generatePerfumes();
-        const jsonPerfumes =JSON.stringify(products);
+    }*/
+     //const products = [{"id":"lfuwryxt-0t199j","name":"MEUHVU","price":671,"size":"6 ml","smell":"Doft av mandel"},{"id":"lfuwryxt-y5vf8v","name":"OGIOUV","price":383,"size":"9 ml","smell":"Doft av vanilj"},{"id":"lfuwryxt-cvfslb","name":"MCLGVR","price":626,"size":"5 ml","smell":"Doft av citrusfrukter"},{"id":"lfuwryxt-4efalb","name":"HUUHOL","price":902,"size":"3 ml","smell":"Doft av äpple"},{"id":"lfuwryxt-bqmt6k","name":"RKELLU","price":272,"size":"8 ml","smell":"Doft av äpple"},{"id":"lfuwryxt-h2kxxm","name":"PTBKGS","price":218,"size":"9 ml","smell":"Doft av mandel"},{"id":"lfuwryxt-ghbd33","name":"OMNPCB","price":520,"size":"8 ml","smell":"Doft av mandel"},{"id":"lfuwryxt-v3jdzf","name":"ICFEFN","price":850,"size":"3 ml","smell":"Doft av rosor"},{"id":"lfuwryxt-3nh74k","name":"RTFMTI","price":453,"size":"6 ml","smell":"Doft av äpple"},{"id":"lfuwryxt-lpzqtv","name":"OFJICI","price":360,"size":"6 ml","smell":"Doft av äpple"}]
+   /* function savePerfumesToLocalStorage(){
+        const productss = products;
+        const jsonPerfumes =JSON.stringify(productss);
         localStorage.setItem('products', jsonPerfumes);
-    }
+    }*/
+
+   
     function getPerfumesFromLocalStorage(){
         const jsonPerfumes = localStorage.getItem('products');
         return JSON.parse(jsonPerfumes);
     }
-    if (!localStorage.getItem('products')){
+    /*if (!localStorage.getItem('products')){
         savePerfumesToLocalStorage();
-    }
+    }*/
+    
     const product = getPerfumesFromLocalStorage();
 export default product;
    

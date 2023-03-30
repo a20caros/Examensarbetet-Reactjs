@@ -1,5 +1,5 @@
 import React from "react";
-import product from "./Perfume";
+import products from "./Perfume";
 import '../CSS/ProductStyle.css'; 
 import PerfumeSite from "./PerfumeSite";
 
@@ -8,7 +8,7 @@ const WriteProducts=({addToCart})=>{
     return (
         <div className="productFloat">
            {" "}
-            {product.map((item) => (
+            {products.map((item) => (
               <PerfumeSite key={item.id} item={item} addToCart={addToCart} />
             ))}
          </div>

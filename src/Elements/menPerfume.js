@@ -1,14 +1,14 @@
-import orangeMenPerfume from './pexels-darina-belonogova-8789599.jpg';
+/*import orangeMenPerfume from './pexels-darina-belonogova-8789599.jpg';
 import darkOrangePerfume from './pexels-rfstudio-3059609.jpg';
 import blackPerfume from './pexels-darina-belonogova-8789609.jpg';
 import greenCapPerfume from './pexels-dina-nasyrova-3831748.jpg';
 import goldPerfume from './pexels-syed-nouman-7400855.jpg';
 import darkBluePerfume from './pexels-jonathan-cooper-15190739.jpg';
-import darkGoldPerfume from './pexels-yogesh-jangid-7702669.jpg';
+import darkGoldPerfume from './pexels-yogesh-jangid-7702669.jpg';*/
 import {createContext} from 'react';
 export const shopContext = createContext(null); 
 
-    function getMenProductName() {
+    /*function getMenProductName() {
         var productMenHeading='';
         const character = "ABCDEFGHIJKLMNOPRSTUV";
         for(var i, i = 0; i < 6; i++){
@@ -64,14 +64,14 @@ export const shopContext = createContext(null);
         const menProducts = generateMenPerfumes();
         const jsonMenPerfumes =JSON.stringify(menProducts);
         localStorage.setItem('menProducts', jsonMenPerfumes);
-    }
+    }*/
     function getMenPerfumesFromLocalStorage(){
-        const jsonMenPerfumes = localStorage.getItem('menProducts');
-        return JSON.parse(jsonMenPerfumes);
+        const jsonMenPerfume = localStorage.getItem('menProduct');
+        return JSON.parse(jsonMenPerfume);
     }
-    if (!localStorage.getItem('menProducts')){
+    /*if (!localStorage.getItem('menProducts')){
         saveMenPerfumesToLocalStorage();
-    }
+    }*/
     const menProduct = getMenPerfumesFromLocalStorage();
 
 export default menProduct;

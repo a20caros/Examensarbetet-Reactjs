@@ -21,6 +21,7 @@ const Cart=({setCartProducts, cartProducts})=>{
     
     useEffect(() =>{
         totalPrice();
+        window.postMessage({ type: 'cartProductsUpdate', payload: cartProducts });
     }, [cartProducts]);
     return(
        <div>
