@@ -65,24 +65,9 @@ const ImagesInfo=()=>{
                 <td><a href="https://pixabay.com/sv/photos/parfym-glasflaska-parfymflaska-227100/">Länk</a></td>
             </tr>
             <tr>
-                <td><img className='imagesInformation' src={parfymeImg}/></td>
-                <td><p>cottonbro studio</p></td>
-                <td><a href="https://www.pexels.com/sv-se/foto/hand-spegel-fingrar-elegant-4659794/">Länk</a></td>
-            </tr>
-            <tr>
-                <td><img className='imagesInformation' src={essentialOilImg}/></td>
-                <td><p>cottonbro studio</p></td>
-                <td><a href="https://www.pexels.com/sv-se/foto/hand-spegel-fingrar-elegant-4659794/">Länk</a></td>
-            </tr>
-            <tr>
-                <td><img className='imagesInformation' src={parfymeHand}/></td>
-                <td><p>Artem Podrez</p></td>
-                <td><a href="https://www.pexels.com/sv-se/foto/hand-spegel-fingrar-elegant-4659794/">Länk</a></td>
-            </tr>
-            <tr>
-                <td><img className='imagesInformation' src={parfymeFlower}/></td>
-                <td><p>Ron Lach</p></td>
-                <td><a href="https://www.pexels.com/sv-se/foto/hander-kvinna-falt-blommor-10536609/">Länk</a></td>
+                <td><img className='imagesInformation' src={"https://pixabay.com/get/g77783ce50a103f762774e8995d1de46a80046223745e3f3164098c4acee7b18e651b1d92983fcb00b2d49407d190739efe5b37ab2476e9bb57065b9df24281e04e43beb363d1c5a24fa9fd634da961d9_1280.jpg"}/></td>
+                <td><p>Victoria_Watercolor</p></td>
+                <td><a href="https://pixabay.com/photos/hipsters-girls-coquette-perfume-4213520/">Länk</a></td>
             </tr>
         </tbody>
        </table>
