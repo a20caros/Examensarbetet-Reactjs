@@ -14,7 +14,7 @@ const ShopMenPerfume = ({item, addToCart}) => {
                 <p>{price} kr</p>
                 <p>{smell}</p>
                 <p>{size}</p>
-                <Link to="/cart" ><button className="addToCartBtn" onClick={() => addToCart(item)}>+</button></Link>
+                <Link to="/cart" className="linkAddToCart" onClick={() => addToCart(item)}>+</Link>
             </div>
         </div>
         
