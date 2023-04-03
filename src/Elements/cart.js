@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useRef } from 'react';
 import '../CSS/cart.css'; 
 import {useState } from 'react'; 
 
@@ -19,9 +19,19 @@ const Cart=({setCartProducts, cartProducts})=>{
           setCartPrice(cartPrice);
     };
     
+    const firstRun = useRef(true);
     useEffect(() =>{
         totalPrice();
-        window.postMessage({ type: 'cartProductsUpdate', payload: cartProducts });
+        if (firstRun.current || document.getElementById("cartitems") === null) {
+            firstRun.current = false;
+            return;
+        }
+        if (document.getElementById("cartitems") !== null) {
+            const stopTime = Date.now();
+            console.log('slut '+ stopTime);
+            window.localStorage.setItem('stopTime', stopTime);
+        }
+        
     }, [cartProducts]);
     return(
        <div>

@@ -71,7 +71,7 @@ export const shopContext = createContext(null);
 
    
     function getPerfumesFromLocalStorage(){
-        const jsonPerfumes = localStorage.getItem('products');
+        const jsonPerfumes = localStorage.getItem('producttt');
         return JSON.parse(jsonPerfumes);
     }
     /*if (!localStorage.getItem('products')){

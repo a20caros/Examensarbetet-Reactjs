@@ -66,7 +66,7 @@ export const shopContext = createContext(null);
         localStorage.setItem('menProducts', jsonMenPerfumes);
     }*/
     function getMenPerfumesFromLocalStorage(){
-        const jsonMenPerfume = localStorage.getItem('menProduct');
+        const jsonMenPerfume = localStorage.getItem('menProducts');
         return JSON.parse(jsonMenPerfume);
     }
     /*if (!localStorage.getItem('menProducts')){
