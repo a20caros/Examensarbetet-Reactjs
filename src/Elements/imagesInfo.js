@@ -1,7 +1,3 @@
-import parfymeImg from './pexels-cottonbro-studio-4659794.jpg';
-import essentialOilImg from './pexels-cottonbro-studio-4659792.jpg';
-import parfymeHand from './pexels-artem-podrez-6801188.jpg';
-import parfymeFlower from './pexels-ron-lach-10536602.jpg';
 import React from 'react';
 import '../CSS/imagesinfo.css';
 const ImagesInfo=()=>{
