@@ -8,6 +8,7 @@ const WriteProducts=({addToCart})=>{
     return (
         <div className="productFloat">
            {" "}
+           {/*Loops through the products array and sends it to the women Perfumessite*/}
             {products.map((item) => (
               <PerfumeSite key={item.id} item={item} addToCart={addToCart} />
             ))}

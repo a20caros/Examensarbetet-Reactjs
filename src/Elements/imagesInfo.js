@@ -1,5 +1,6 @@
 import React from 'react';
 import '../CSS/imagesinfo.css';
+//A table of all images with their links and authors
 const ImagesInfo=()=>{
     return(
         <>

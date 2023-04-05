@@ -7,6 +7,7 @@ const WriteProductsMen=({addToCart})=>{
     return (
         <div className="productFloat">
            {" "}
+            {/*Loops through the menProduct array and sends it to the men Persume component*/}
             {menProduct.map((item) => (
             <ShopMenPerfume key={item.id} item={item} addToCart={addToCart}/>
             ))}

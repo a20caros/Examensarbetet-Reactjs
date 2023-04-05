@@ -10,6 +10,7 @@ const Navbar=()=>{
         <>
         <div className='container container-flex'>
             <nav>
+            {/*A navlink so you can navigate in the navbar*/}
                 <div className='list'>
                     <NavLink className="navbarList" to="/">Hem</NavLink>
                     <NavLink to="/writeProducts" id="womenPerfume">Dam Parfymer</NavLink>
