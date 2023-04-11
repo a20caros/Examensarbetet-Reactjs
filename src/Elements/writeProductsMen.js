@@ -1,14 +1,16 @@
 import React from "react";
-import menProduct  from "./menPerfume";
 import '../CSS/ProductStyle.css'; 
 import ShopMenPerfume from "./shopMenPerfume";
+import mProduct from 'file:///C:/Users/carol/OneDrive/Skrivbord/files/menProduct.json';
 
 const WriteProductsMen=({addToCart})=>{
+    const menproductsString = JSON.stringify(mProduct);
+  localStorage.setItem("myMenProducts", menproductsString);
     return (
         <div className="productFloat">
            {" "}
             {/*Loops through the menProduct array and sends it to the men Persume component*/}
-            {menProduct.map((item) => (
+            {mProduct.map((item) => (
             <ShopMenPerfume key={item.id} item={item} addToCart={addToCart}/>
             ))}
          </div>
