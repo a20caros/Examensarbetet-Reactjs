@@ -4,8 +4,9 @@ import ShopMenPerfume from "./shopMenPerfume";
 import mProduct from 'file:///C:/Users/carol/OneDrive/Skrivbord/files/menProduct.json';
 
 const WriteProductsMen=({addToCart})=>{
+    //Adds the products to localStorage so the script can retrieve it
     const menproductsString = JSON.stringify(mProduct);
-  localStorage.setItem("myMenProducts", menproductsString);
+    localStorage.setItem("myMenProducts", menproductsString);
     return (
         <div className="productFloat">
            {" "}

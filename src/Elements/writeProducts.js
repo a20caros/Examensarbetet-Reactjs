@@ -1,11 +1,12 @@
 import React from "react";
 import '../CSS/ProductStyle.css'; 
 import PerfumeSite from "./PerfumeSite";
-import products from 'file:///C:/Users/carol/OneDrive/Skrivbord/files/womenProduct.json';
+import products from 'file:///C:/Users/carol/OneDrive/Skrivbord/files/womenProducts.json';
 
 const WriteProducts=({addToCart})=>{
+  //Adds the products to localStorage so the script can retrieve it
   const productsString = JSON.stringify(products);
-  localStorage.setItem("myProducts", productsString);
+  localStorage.setItem("WomenProducts", productsString);
     return (
         <div className="productFloat">
            {" "}
